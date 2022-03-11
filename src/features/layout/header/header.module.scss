@@ -1,10 +1,7 @@
 .header {
   height: 60px;
   margin: 0;
-  //background-color: #f9f4ef;
   background-color: #55423d;
-  //color: #020826;
-  //color: #fffffe;
   color: #f9f4ef;
   padding: 4px 16px;
 
@@ -12,6 +9,7 @@
     line-height: 52px;
   }
 }
+
 
 .logo {
   float: left;
@@ -33,5 +31,16 @@
       text-decoration: underline;
       color: #f9f4ef;
     }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .navigation {
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header {
+    height: 120px;
   }
 }
