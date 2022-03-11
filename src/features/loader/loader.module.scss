@@ -1,0 +1,13 @@
+.spinner {
+  font-size:50px;
+  text-align:center;
+  animation:2s spin linear infinite;
+  padding:20px 0;
+}
+
+/*animation keyframe*/
+@keyframes spin{
+  to {
+    transform: rotateZ(360deg);
+  }
+}

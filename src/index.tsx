@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import './styles/styles.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import {ErrorBoundary} from "./features/layout/errorBoundary/ErrorBoundry";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ErrorBoundary>
+          <BrowserRouter>
+              <App />
+          </BrowserRouter>
+      </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );

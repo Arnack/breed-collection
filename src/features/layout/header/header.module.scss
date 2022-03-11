@@ -20,14 +20,18 @@
 .navigation {
   padding-right: 160px;
 
-  span {
+  a {
     margin: 16px;
+    font-size: 20px;
     line-height: 52px;
     font-weight: bold;
     cursor: pointer;
+    color: #f9f4ef;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
+      color: #f9f4ef;
     }
   }
 }

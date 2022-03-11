@@ -1,0 +1,1 @@
+export const imagePlaceholder = "https://placehold.jp/30/dd6699/ffffff/300x300.png";

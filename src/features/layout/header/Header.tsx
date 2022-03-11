@@ -1,5 +1,6 @@
 import React, {FC} from "react";
 import styles from "./header.module.scss";
+import {Link} from "react-router-dom";
 
 export const Header: FC = () => {
     return <div className={styles.header}>
@@ -7,14 +8,10 @@ export const Header: FC = () => {
             <h1>Doggos 🐶</h1>
         </div>
 
-        <div className={styles.navigation}>
-            <span>
-                Collection
-            </span>
-            <span>
-                Explore
-            </span>
-        </div>
+        <nav className={styles.navigation}>
+            <Link to="/collection">Collection</Link>
+            <Link to="/explore">Explore</Link>
+        </nav>
 
     </div>
 }
