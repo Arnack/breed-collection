@@ -5,7 +5,7 @@ body.light {
   height: 100vh;
   background-color: #fffffe;
 
-  p, h1 {
+  h1 {
     font-family: 'Grandstander', cursive;
   }
 
@@ -15,5 +15,17 @@ body.light {
 
   button {
     margin: 20px 8px;
+  }
+
+  .btn {
+    outline: none;
+  }
+
+  .btn.btn-primary {
+    background-color: #55423d;
+    border-color: #55423d;
+    &:hover {
+      background-color: #312623;
+    }
   }
 }
