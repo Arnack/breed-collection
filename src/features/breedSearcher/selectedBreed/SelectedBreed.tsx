@@ -3,7 +3,7 @@ import styles from "./selectedBreed.module.scss";
 import axios from "axios";
 import {LocalCollectionStore} from "../../../store/breedStore/localCollectionStore";
 import {Loader} from "../../loader/Loader";
-import {imagePlaceholder} from "../../../model/constants";
+import {imagePlaceholder, REACT_APP_SINGLE_BREED_URL} from "../../../model/constants";
 
 interface IProps {
     breedName: string;
@@ -25,7 +25,7 @@ export const SelectedBreed: FC<IProps> = ({breedName}) => {
 
     const fetchImage = () => {
         setIsLoading(true);
-        axios.get(`${process.env.REACT_APP_SINGLE_BREED_URL}${breedName}/images/random`)
+        axios.get(`${REACT_APP_SINGLE_BREED_URL}${breedName}/images/random`)
             .then((res) => {
                 setImage(res.data.message);
             })

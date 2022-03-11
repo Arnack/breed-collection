@@ -1,5 +1,6 @@
 import React, {FC} from "react";
 import axios from "axios";
+import {REACT_APP_RANDOM_BREED_IMG_URL} from "../../../model/constants";
 
 interface IProps {
     callback: (breedName: string, image: string) => void;
@@ -9,7 +10,7 @@ interface IProps {
 export const RandomBreed:FC<IProps> = ({ callback, updateLoadingStatus }) => {
     const handleAddRandomBreed = () => {
         updateLoadingStatus(true);
-        axios.get(`${process.env.REACT_APP_RANDOM_BREED_IMG_URL}`)
+        axios.get(REACT_APP_RANDOM_BREED_IMG_URL)
             .then((res) => {
                 const imgUrl = res.data.message;
                 const breedName = imgUrl.split('/')[4].split('-').join(' ');
